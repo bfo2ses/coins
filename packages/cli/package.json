@@ -1,0 +1,36 @@
+{
+  "name": "@coins/cli",
+  "version": "1.0.0",
+  "description": "Coins cli",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/bfo2ses/coins.git",
+  "author": "bfo2ses",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/index.js",
+    "test": "jest --coverage --verbose",
+    "test:watch": "npm run test -- --watchAll",
+    "prebuild": "rimraf dist",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/command-line-args": "^5.0.0",
+    "@types/command-line-usage": "^5.0.1",
+    "@types/jest": "^26.0.19",
+    "jest": "^26.6.3",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "@coins/api-alternative": "^1.0.0",
+    "@coins/api-coingecko": "^1.0.0",
+    "@coins/common": "^1.0.0",
+    "@coins/display-pretty-console": "^1.0.0",
+    "@coins/display-raw-console": "^1.0.0",
+    "axios": "^0.21.0",
+    "command-line-args": "^5.1.1",
+    "command-line-usage": "^6.1.1"
+  }
+}

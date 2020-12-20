@@ -1,0 +1,28 @@
+{
+  "name": "coins",
+  "version": "1.0.0",
+  "description": "Simple CLI to fetch and display a table of cryptocurrencies prices and other data from a free API",
+  "main": "index.js",
+  "repository": "https://github.com/bfo2ses/coins.git",
+  "author": "bfo2ses",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "yarn workspace @coins/cli start",
+    "help": "yarn workspace @coins/cli start -h",
+    "test": "yarn workspace @coins/api-alternative test && yarn workspace @coins/api-coingecko test && yarn workspace @coins/display-pretty-console test && yarn workspace @coins/display-raw-console test && yarn workspace @coins/cli test",
+    "build": "yarn build:common && yarn build:api-coingecko && yarn build:api-alternative && yarn build:display-pretty-console && yarn build:display-raw-console && yarn build:cli",
+    "build:cli": "yarn workspace @coins/cli build",
+    "build:display-pretty-console": "yarn workspace @coins/display-pretty-console build",
+    "build:display-raw-console": "yarn workspace @coins/display-raw-console build",
+    "build:api-alternative": "yarn workspace @coins/api-alternative build",
+    "build:api-coingecko": "yarn workspace @coins/api-coingecko build",
+    "build:common": "yarn workspace @coins/common build"
+  },
+  "workspaces": [
+    "packages/cli",
+    "packages/display/*",
+    "packages/api/*",
+    "packages/common"
+  ]
+}

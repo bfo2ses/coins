@@ -1,0 +1,26 @@
+{
+  "name": "@coins/display-raw-console",
+  "version": "1.0.0",
+  "description": "Display console",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/bfo2ses/coins.git",
+  "author": "bfo2ses",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "test:watch": "npm run test -- --watchAll",
+    "prebuild": "rimraf dist",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.19",
+    "jest": "^26.6.3",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "@coins/common": "^1.0.0"
+  }
+}

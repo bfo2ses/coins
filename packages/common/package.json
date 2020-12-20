@@ -1,0 +1,18 @@
+{
+  "name": "@coins/common",
+  "version": "1.0.0",
+  "description": "Common interfaces and enums",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/bfo2ses/coins.git",
+  "author": "bfo2ses",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.2"
+  }
+}
